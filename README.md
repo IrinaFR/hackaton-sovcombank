@@ -27,7 +27,7 @@
 - Vuex
 - axios
 - Bootstrap
-- Scss
+- Pug
 Для мобильного приложения подключён CapacitorJS 5 версии
 
 ```
