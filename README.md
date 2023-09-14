@@ -33,25 +33,45 @@
 ```
 
 
-## Setup
-
-Make sure to install the dependencies:
-
+## Запуск frontend
+Склонировать проект на локальную машину
 ```
-# npm
+cd frontend
+```
+```
 npm install
 ```
+P.S. возможно потребуется глобально установить Vue
 ```
-# npm
+npm install -g @vue/cli
+```
+
+### Запустить проект
+```
 npm run serve
 ```
 
-## Production
-
-Build the application for production:
-
+### Билд для веба
 ```
-# npm
 npm run build
 ```
+### Билд для android\ios
+```
+Для хакатона готовый apk билд находится в:
+1. mobile/digital-office.apk
+2. frontend/android/app/build/outputs/apk/debug/app-debug.apk
+P.S. при установке на некоторых версиях системы может показать уведомление, 
+что приложение небезопасно, т.к. устанавливается из неизвестного источника. 
+Необходимо "Больше деталей" => "Всё равно установить" (зависит от версии) 
+```
+Самостоятельный билд
+```
+1 шаг: npm run buildMobile - билд для android\ios
+------ >
+2 шаг:android
+npm run buildApk
 
+P.S для работы необходим JAVA Jdk не ниже 17.07, Android Studio 
+и Gradle 8.0.1 с прописанными переменными окружения
+
+2 шаг:ios Для дальнейшей работы нужен XCode
