@@ -1,0 +1,31 @@
+.mainHeader .v-toolbar__prepend{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.subHeader .v-toolbar__prepend{
+    margin-left: 20px !important;
+}
+.subHeader .v-toolbar__content{
+	flex-wrap: wrap;
+}
+.subHeader .v-toolbar__prepend{
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.v-badge__badge.v-theme--light{
+    bottom: 0 !important;
+    right: 20px !important;
+    left: auto !important; ;
+}
+
+@media(max-width: 576px){
+	.subHeader .v-toolbar__content{
+		padding: 15px 10px;
+	}
+	.subHeader .v-toolbar__prepend{
+		margin-bottom: 15px;
+		display: none;
+	}
+}

@@ -1,0 +1,77 @@
+/* дефолтная синяя кнопка */
+button.btn,
+a.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    text-decoration: none;
+    color: rgba(var(--v-theme-text-main), 1);
+    height: 48px;
+    padding: 0 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 48px;
+    border: solid 1px rgba(var(--v-theme-border), 1);
+    background: rgba(var(--v-theme-white), 1);
+    transition: all .15s ease-in-out
+}
+button.btn:hover,
+a.btn:hover{
+    background: rgba(var(--v-theme-violet-bg), 1);
+}
+button.btn:active,
+a.btn:active{
+    background: var(--v-theme-border) !important;
+}
+button.btn:disabled,
+a.btn:disabled{
+    background: var(--v-theme-border);
+    color: rgba(var(--v-theme-text-main), 1);
+    opacity: .7;
+}
+button.btn img,
+a.btn img{
+    height: 16px;
+    max-height: 16px;
+}
+
+/*просто текст*/
+
+button.btn-text,
+a.btn-text{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:  rgba(var(--v-theme-text-main), 1);
+    height: 48px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    line-height: 48px;
+    font-weight: 700;
+    background: rgba(var(--v-theme-bg), 1);
+    transition: all .15s ease-in-out
+}
+button.btn-text:hover,
+a.btn-text:hover{
+    background: rgba(var(--v-theme-border), 1);
+}
+button.btn-text:active,
+a.btn-text:active{
+    background: rgba(var(--v-theme-grey), 1);
+    border: none;
+}
+button.btn-text:disabled,
+a.btn-text:disabled{
+    background: rgba(var(--v-theme-white), 1);
+    color: rgba(var(--v-theme-text-main), 1);
+    opacity: .7;
+}
+button.btn-text img,
+a.btn-text img{
+    height: 16px;
+    max-height: 16px;
+}

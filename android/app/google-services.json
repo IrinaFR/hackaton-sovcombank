@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158646104622",
+    "project_id": "hr-hackaton",
+    "storage_bucket": "hr-hackaton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158646104622:android:e7f547bfec892270dc65bf",
+        "android_client_info": {
+          "package_name": "ru.digital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158646104622-f30db9vp5l1vlnab2krbis8bdvf6pcka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfxV4wSi9yctRxpHtVorIu4_mKJcFyCWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158646104622-f30db9vp5l1vlnab2krbis8bdvf6pcka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

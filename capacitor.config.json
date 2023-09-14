@@ -1,0 +1,12 @@
+{
+  "appId": "ru.digital",
+  "appName": "Цифровой офис",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "ios": {
+    "contentInset": "never"
+  },
+  "server": {
+    "hostname": "localhost:8080"
+  }
+}

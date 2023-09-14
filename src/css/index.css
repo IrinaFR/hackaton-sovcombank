@@ -1,0 +1,102 @@
+/*bootstrap*/
+@import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+/*@import 'bootstrap/dist/css/bootstrap-grid.css';*/
+/*@import 'bootstrap/dist/css/bootstrap-utilities.css';*/
+
+@import "variables.css";
+@import "helpers.css";
+@import "vuetify.css";
+/*components*/
+@import './ui/DoUiButtons.css';
+@import './ui/DoUiForm.css';
+@import './ui/DoUiModal.css';
+@import './ui/DoUiTabs.css';
+@import './plugins/DoPluginsVSelect.css';
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(var(--v-theme-text-main));
+	line-height: 140%;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(var(--v-theme-violet), 1);
+}
+a:hover{
+    color: #4822ab;
+    transition: color .2s ease;
+}
+header{
+    border-bottom: solid 1px rgba(var(--v-theme-border), 1) !important;
+}
+main{
+    background: rgba(var(--v-theme-bg), 1);
+}
+.v-application__wrap nav{
+    border-right: solid 1px rgba(var(--v-theme-border), 1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+.titleBlock{
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 140%;
+	margin-bottom: 30px;
+}
+.blockContent{
+	padding: 40px;
+	background: rgba(var(--v-theme-white));
+	border: 1px solid rgba(var(--v-theme-border));
+	border-radius: 10px;
+	margin-bottom: 40px;
+	height: 100%;
+}
+.blockCard{
+	padding: 15px;
+	background: rgba(var(--v-theme-white));
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+	height: 100%;
+}
+.titleCard{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 140%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+[v-cloak]{
+	opacity: 0;
+}
+
+@media(max-width: 567px) {
+	body{
+		line-height: 100%;
+	}
+	.titleBlock {
+		font-weight: 700;
+		font-size: 19px;
+		line-height: 100%;
+		margin-bottom: 20px;
+	}
+
+	.blockContent {
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+
+	.blockCard {
+		padding: 10px;
+	}
+}

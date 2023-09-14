@@ -1,0 +1,14 @@
+:root{
+    --bg: #F2F4F7;
+    --violet: #7C4AFD;
+    --voilet-gradient: linear-gradient(135deg, #9983FF 0%, #5208F0 100%);
+    --violet-bg: #F7F7FF;
+    --text-main: #333;
+    --white: #fff;
+    --border: #ECEDEF;
+    --grey: #ADAEB0;
+    --red: #FA7B7B;
+    --orange: #F3C175;
+    --green: #6BDC91;
+    --blue: #71A5F4;
+}

@@ -1,0 +1,68 @@
+image: othernik/aero:2.0
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=./.m2/repository"
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build-back:
+  tags:
+    - aero
+  artifacts:
+    paths:
+      - ./backend/target/*.jar
+  stage: build
+  when: always
+  script:
+    - cd backend
+    - mvn clean package
+  cache:
+    paths:
+      - ./.m2
+
+deploy-back:
+  stage: deploy
+  only:
+    refs:
+      - main
+  tags:
+    - aero
+  script:
+    - cd backend
+    - cp  target/backend-1.0.0.jar /home/$DEV_USER/jars/
+    - cd /home/$DEV_USER
+    - docker-compose down
+    - docker-compose up -d
+
+build-front:
+  tags:
+    - aero
+  artifacts:
+    paths:
+      - frontend/dist/**
+  stage: build
+  script:
+    - cd frontend
+    - npm install
+    - npm run build
+
+deploy-front:
+  tags:
+    - aero
+  stage: deploy
+  only:
+    refs:
+      - main
+  script:
+    - cd frontend
+    - rm -rf /home/othernik/web
+    - cp -r ./dist /home/othernik/web
+    - cd /home/othernik
+    - docker-compose down
+    - docker-compose up -d
